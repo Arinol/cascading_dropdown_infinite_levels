@@ -1,0 +1,56 @@
+<html>
+<head>
+
+</head>
+<body>
+<div id="check"></div>
+<select data-target="secondList" class="firstList selectFilter">
+	<option value="-1">Select</option>
+	<option data-ref="one" >Level1</option>
+	<option data-ref="two" >First Two</option>
+	<option data-ref="three">First Three</option>
+</select>
+<br />
+<br />
+<select data-target="thirdList" class="secondList selectFilter">
+	<option value="-1">Select</option>
+	<option data-ref="A" data-belong="one" >Level2</option>
+	<option data-ref="B" data-belong="two">First Two</option>
+	<option data-ref="C" data-belong="three">First Three</option>
+</select>
+<br />
+<br />
+<select data-target="FourthList" class="thirdList selectFilter">
+	<option value="-1">Select</option>
+	<option data-ref="test1" data-belong="A" >Level3</option>
+	<option data-ref="test2" data-belong="B">First Two</option>
+
+
+</select>
+
+
+<br />
+<br />
+<select data-target="FifthList" class="FourthList selectFilter">
+	<option value="-1">Select</option>
+	<option data-ref="test3" data-belong="test1" >Level4</option>
+	<option data-belong="test2">test2</option>
+
+
+</select>
+
+<br />
+<br />
+<select class="FifthList selectFilter">
+	<option value="-1">Select</option>
+	<option data-belong="test3" >Level5</option>
+	<option data-belong="test2">test2</option>
+
+
+</select>
+
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="selectFilter.min.js"></script>
+</body>
+</html>
