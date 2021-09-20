@@ -4,52 +4,344 @@
 </head>
 <body>
 <div id="check"></div>
+<label>Country :</label>
 <select data-target="secondList" class="firstList selectFilter">
-	<option value="-1">Select</option>
-	<option data-ref="one" >Level1</option>
-	<option data-ref="two" >First Two</option>
-	<option data-ref="three">First Three</option>
+	
+	<option value="-1">Belize</option>
 </select>
 <br />
 <br />
-<select data-target="thirdList" class="secondList selectFilter">
+<label>Island / Caye :</label>
+
+<script type="text/javascript">
+function belizeJs(value)
+{
+	if((document.getElementById("caye").value==-1)){
+			document.getElementById("mySelect").options[3].style.display = "none"; 
+			document.getElementById("mySelect").options[4].style.display = "block"
+                   
+			//document.getElementById("mySelect").options[4].value.hidden = "false"
+			}
+			else{
+				document.getElementById("mySelect").options[3].style.display = "block"; 
+				document.getElementById("mySelect").options[4].style.display = "none";
+                  
+				//document.getElementById("mySelect").options[4].hidden = "true"
+				//document.getElementById("mySelect").options[3].hidden = "false"
+			}
+}
+</script>
+
+<select data-target="thirdList" class="secondList selectFilter" id="caye"  onchange="belizeJs(this.value);">
 	<option value="-1">Select</option>
-	<option data-ref="A" data-belong="one" >Level2</option>
-	<option data-ref="B" data-belong="two">First Two</option>
-	<option data-ref="C" data-belong="three">First Three</option>
+	 <option data-ref="Belize" data-belong="Ambergris" >Ambergris Caye</option>
+	<!--<option data-ref="B" data-belong="two">First Two</option>
+	<option data-ref="C" data-belong="three">First Three</option> -->
 </select>
 <br />
 <br />
-<select data-target="FourthList" class="thirdList selectFilter">
-	<option value="-1">Select</option>
-	<option data-ref="test1" data-belong="A" >Level3</option>
-	<option data-ref="test2" data-belong="B">First Two</option>
 
+<label>District :</label>
+<select data-target="FourthList" class="thirdList selectFilter" id="mySelect">
+	<option value="-1"						data-ref="">Select</option>
+	<option data-ref="Corozal" 				data-belong="" >Corozal</option>
+	<option data-ref="Orange-Walk" 			data-belong="">Orange Walk</option>
 
+	<option hidden data-ref="san-pedro"  	data-belong="Belize">Belize</option>
+	<option data-ref="Belize" 				data-belong="Belize">Belize</option>
+
+	<option data-ref="Cayo" 				data-belong="">Cayo</option>
+	<option data-ref="Stann-Creek" 			data-belong="">Stann Creek</option>
+	<option data-ref="toledo" 				data-belong="">Toledo</option>
 </select>
-
 <br />
 <br />
+<label>City or Town :</label>
 <select data-target="FifthList" class="FourthList selectFilter">
-	<option value="-1">Select</option>
-	<option data-ref="test3" data-belong="test1" >Level4</option>
-	<option data-belong="test2">test2</option>
+
+	<option value="-1" 					data-ref="">Select</option>
+	<option data-ref="" 				data-belong="Belize">  Belize City  </option>
+	<option data-ref="" 				data-belong="Cayo">   Belmopan </option>
+	<option data-ref="" 				data-belong="Cayo"> Benque Viejo del Carmen </option>
+	<option data-ref=""					data-belong="Corozal">  Corozal Town  </option>
+	<option data-ref=""			 		data-belong="Stann-Creek" >  Dangriga </option>
+	<option data-ref="" 				data-belong="toledo">     Punta Gorda </option>
+	<option data-ref="" 				data-belong="Cayo">San Ignacio/Santa Elena  </option>
+	<option data-ref="" 				data-belong="Orange-Walk">  Orange Walk Town </option>
+	<option data-ref="" 	 			data-belong="Belize">  San Pedro  </option>
+	<option data-ref="" 	 			data-belong="san-pedro">  San Pedro  </option>
+
 
 
 </select>
 
+
 <br />
 <br />
-<select class="FifthList selectFilter">
-	<option value="-1">Select</option>
-	<option data-belong="test3" >Level5</option>
-	<option data-belong="test2">test2</option>
+<label>Village :</label>
+
+<select data-target="SixthList" class="FourthList selectFilter">
+
+	<option value="-1" data-ref="">Select</option>
+
+	<!-- Village of Crozal -->
+	<option data-belong="Corozal" data-ref="">Buena Vista</option>
+	<option data-belong="Corozal" data-ref="">Calcutta</option>
+	<option data-belong="Corozal" data-ref="">Caledonia</option>
+	<option data-belong="Corozal" data-ref="">Carolina</option>
+	<option data-belong="Corozal" data-ref="">Chan Chen</option>
+	<option data-belong="Corozal" data-ref="">Chunox</option>
+	<option data-belong="Corozal" data-ref="">Concepción</option>
+	<option data-belong="Corozal" data-ref="">Consejo</option>
+	<option data-belong="Corozal" data-ref="Copper-Bank">Copper Bank</option>
+	<option data-belong="Corozal" data-ref="">Cristo Rey</option>
+	<option data-belong="Corozal" data-ref="">Libertad</option>
+	<option data-belong="Corozal" data-ref="">Louisville</option>
+	<option data-belong="Corozal" data-ref="">Paraiso</option>
+	<option data-belong="Corozal" data-ref="">Patchakan</option>
+	<option data-belong="Corozal" data-ref="">Progresso</option>
+	<option data-belong="Corozal" data-ref="">Ranchito</option>
+	<option data-belong="Corozal" data-ref="">San Andrés</option>
+	<option data-belong="Corozal" data-ref="">San Antonio</option>
+	<option data-belong="Corozal" data-ref="">San Joaquín</option>
+	<option data-belong="Corozal" data-ref="">San Narciso</option>
+	<option data-belong="Corozal" data-ref="">San Pedro</option>
+	<option data-belong="Corozal" data-ref="">San Román</option>
+	<option data-belong="Corozal" data-ref="">San Víctor</option>
+	<option data-belong="Corozal" data-ref="">Santa Clara</option>
+	<option data-belong="Corozal" data-ref="">Sarteneja</option>
+	<option data-belong="Corozal" data-ref="">Xaibe</option>
+	<option data-belong="Corozal" data-ref="">Yo Chen</option>
+
+
+
+	<!-- Village of Orange Walk -->
+	<option data-belong="Orange-Walk" data-ref="">August Pine Ridge  </option>
+	<option data-belong="Orange-Walk" data-ref="">Blue Creek   </option>
+	<option data-belong="Orange-Walk" data-ref="">Carmelita  </option>
+	<option data-belong="Orange-Walk" data-ref="">Chan Pine Ridge   </option>
+	<option data-belong="Orange-Walk" data-ref="">Douglas  </option>
+	<option data-belong="Orange-Walk" data-ref="">Fire Burn</option>
+	<option data-belong="Orange-Walk" data-ref="">Guinea Grass  </option>
+	<option data-belong="Orange-Walk" data-ref="">Indian Church  </option>
+	<option data-belong="Orange-Walk" data-ref="">Nuevo San Juan  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Antonio  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Carlos  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Estevan  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Felipe  </option>
+	<option data-belong="Orange-Walk" data-ref="">San José </option>
+	<option data-belong="Orange-Walk" data-ref="">San José Palmar  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Lázaro  </option>
+	<option data-belong="Orange-Walk" data-ref="">Santa Cruz </option>
+	<option data-belong="Orange-Walk" data-ref="">San Luis </option>
+	<option data-belong="Orange-Walk" data-ref="">San Pablo  </option>
+	<option data-belong="Orange-Walk" data-ref="">San Román  </option>
+	<option data-belong="Orange-Walk" data-ref="">Santa Martha  </option>
+	<option data-belong="Orange-Walk" data-ref="">Shipyard  </option>
+	<option data-belong="Orange-Walk" data-ref="">Tower Hill  </option>
+	<option data-belong="Orange-Walk" data-ref="">Trial Farm </option>
+	<option data-belong="Orange-Walk" data-ref="">Trinidad </option>
+	<option data-belong="Orange-Walk" data-ref="">Yo Creek   </option>
+
+	<!-- Village of Belize -->
+	<option data-belong="Belize" data-ref="">Bermudian  </option>
+	<option data-belong="Belize" data-ref="">Landing </option>
+	<option data-belong="Belize" data-ref="">Biscayne  </option>
+	<option data-belong="Belize" data-ref="">Bomba  </option>
+	<option data-belong="Belize" data-ref="">Boston  </option>
+	<option data-belong="Belize" data-ref="">Burrell Boom  </option>
+	<option data-belong="Belize" data-ref="">Caye Caulker </option>
+	<option data-belong="Belize" data-ref="">Corozalito </option>
+	<option data-belong="Belize" data-ref="">  Crooked Tree  </option>
+	<option data-belong="Belize" data-ref="">  Double Head Cabbage  </option>
+	<option data-belong="Belize" data-ref="">  Flowers Bank  </option>
+	<option data-belong="Belize" data-ref="">  Freetown Sibun  </option>
+	<option data-belong="Belize" data-ref="">  Gales Point  </option>
+	<option data-belong="Belize" data-ref="">  Gardenia  </option>
+	<option data-belong="Belize" data-ref="">   Gracie Rock </option>
+	<option data-belong="Belize" data-ref="">  Hattieville  </option>
+	<option data-belong="Belize" data-ref="">  Isabella Bank  </option>
+	<option data-belong="Belize" data-ref="">   La Democracia </option>
+	<option data-belong="Belize" data-ref="">  Ladyville  </option>
+	<option data-belong="Belize" data-ref="">Lemonal    </option>
+	<option data-belong="Belize" data-ref=""> Lord's Bank   </option>
+	<option data-belong="Belize" data-ref="">  Los Lagos Community  </option>
+	<option data-belong="Belize" data-ref="">   Lucky Strike </option>
+	<option data-belong="Belize" data-ref="">  Mahogany Heights  </option>
+	<option data-belong="Belize" data-ref=""> Maskall   </option>
+	<option data-belong="Belize" data-ref="">   May Pen </option>
+	<option data-belong="Belize" data-ref="">  Mile 8 Community  </option>
+	<option data-belong="Belize" data-ref="">  Rancho Dolores  </option>
+	<option data-belong="Belize" data-ref="">  Rockstone Pond  </option>
+	<option data-belong="Belize" data-ref="">    Sandhill</option>
+	<option data-belong="Belize" data-ref="">   Santana </option>
+	<option data-belong="Belize" data-ref="">   Scotland Halfmoon </option>
+	<option data-belong="Belize" data-ref="">  St. Ann's  </option>
+	<option data-belong="Belize" data-ref="">   St. George's Caye </option>
+	<option data-belong="Belize" data-ref="">  St. Paul's Bank  </option>
+	<option data-belong="Belize" data-ref=""> Western Paradise   </option>
+	<option data-belong="Belize" data-ref="">  Willows Bank  </option>
+
+	<!-- Village of Cayo -->
+	<option data-belong="Cayo" data-ref="">  Arenal  </option>
+	<option data-belong="Cayo" data-ref="" >  Arizona  </option>
+	<option data-belong="Cayo" data-ref=""> Armenia   </option>
+	<option data-belong="Cayo" data-ref="">  Billy White  </option>
+	<option data-belong="Cayo" data-ref="" >  Blackman Eddy  </option>
+	<option data-belong="Cayo" data-ref="">   Buena Vista </option>
+	<option data-belong="Cayo" data-ref="">  Bullet Tree Falls  </option>
+	<option data-belong="Cayo" data-ref="">  Calla Creek  </option>
+	<option data-belong="Cayo" data-ref="">   Camalote </option>
+	<option data-belong="Cayo" data-ref="">  Cotton Tree  </option>
+	<option data-belong="Cayo" data-ref="">  Cristo Rey  </option>
+	<option data-belong="Cayo" data-ref="">  Duck Run I  </option>
+	<option data-belong="Cayo" data-ref="">  Duck Run II  </option>
+	<option data-belong="Cayo" data-ref="">  Duck Run III  </option>
+	<option data-belong="Cayo" data-ref="">  El Progresso  </option>
+	<option data-belong="Cayo" data-ref="">  Esperanza  </option>
+	<option data-belong="Cayo" data-ref="">  Franks Eddy  </option>
+	<option data-belong="Cayo" data-ref="">  Georgeville  </option>
+	<option data-belong="Cayo" data-ref="">   La Gracia </option>
+	<option data-belong="Cayo" data-ref="">  Los Tambos  </option>
+	<option data-belong="Cayo" data-ref="">  Lower Barton Creek  </option>
+	<option data-belong="Cayo" data-ref="">  More Tomorrow  </option>
+	<option data-belong="Cayo" data-ref="">  Ontario  </option>
+	<option data-belong="Cayo" data-ref=""> Roaring Creek  </option>
+	<option data-belong="Cayo" data-ref="">  San Antonio  </option>
+	<option data-belong="Cayo" data-ref="">  San Jose Succotz  </option>
+	<option data-belong="Cayo" data-ref="">  San Marcos  </option>	
+	<option data-belong="Cayo" data-ref="">  Santa Familia  </option>
+	<option data-belong="Cayo" data-ref="">  Santa Marta  </option>
+	<option data-belong="Cayo" data-ref="">  Santa Teresita  </option>
+	<option data-belong="Cayo" data-ref=""> Selena   </option>
+	<option data-belong="Cayo" data-ref="">  Spanish Lookout  </option>
+	<option data-belong="Cayo" data-ref="">  Springfield  </option>
+	<option data-belong="Cayo" data-ref="">  St. Margaret  </option>	
+	<option data-belong="Cayo" data-ref="">  St. Matthews  </option>
+	<option data-belong="Cayo" data-ref="">  Teakettle  </option>
+	<option data-belong="Cayo" data-ref="">  Unitedville  </option>
+	<option data-belong="Cayo" data-ref="">   Upper Barton Creek </option>
+	<option data-belong="Cayo" data-ref="">  Valley of Peace  </option>
+	<option data-belong="Cayo" data-ref="">  Benque Viejo  </option>
+	<option data-belong="Cayo" data-ref=""> Cayo City   </option>	
+	<option data-belong="Cayo" data-ref=""> San Igancio   </option>
+	<option data-belong="Cayo" data-ref="">  Belmopan City  </option>
+
+	<!-- Village of Stann Creek -->
+	<option data-belong="Stann-Creek"  		data-ref="">  Alta Vista  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  George Town  </option>
+	<!-- <option data-belong="Dangriga" 	data-ref="Hope-Creek" >  Hope Creek  </option> -->
+	<option data-belong="Stann-Creek" 		data-ref="" >  Hope Creek  </option>
+	<option data-belong="Stann-Creek" 		data-ref="" >  Hopkins  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">   Hummingbird Community </option>
+	<option data-belong="Stann-Creek" 		data-ref="">Independence    </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Maya Center  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Maya Mopan  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Middlesex  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Mullins River  </option>
+	<option data-belong="Stann-Creek"   	data-ref="Placencia" >Placencia  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Pomona  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Red Bank  </option>
+	<option data-belong="Stann-Creek" 		data-ref=""> Cowpen (San Juan)   </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  San Pablo Village Belize </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  San Román  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Santa Cruz  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">   Santa Rosa </option>
+	<!-- <option data-belong="Dangriga"    data-ref="Sarawee" >  Sarawee  </option> -->
+	<option data-belong="Stann-Creek"    	data-ref="" >  Sarawee  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Silk Grass  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">   Sittee River </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Steadfast  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  Valley Community  </option>
+	<option data-belong="Stann-Creek" 		data-ref="">  The Reserve  </option>
+
+	<!-- Village of Toledo -->
+
+	<option data-belong="Toledo" data-ref="">  Aguacate  </option>
+	<option data-belong="Toledo" data-ref=""> Barranco   </option>
+	<option data-belong="Toledo" data-ref="">  Bella Vista  </option>
+	<option data-belong="Toledo" data-ref="">  Big Falls  </option>
+	<option data-belong="Toledo" data-ref=""> Bladen   </option>
+	<option data-belong="Toledo" data-ref="">  Blue Creek  </option>
+	<option data-belong="Toledo" data-ref="">   Boom Creek </option>
+	<option data-belong="Toledo" data-ref="">  Cattle Landing  </option>
+	<option data-belong="Toledo" data-ref="">   Conejo Creek </option>
+	<option data-belong="Toledo" data-ref="">   Corazon Creek </option>
+	<option data-belong="Toledo" data-ref="">  Crique Jute  </option>
+	<option data-belong="Toledo" data-ref="">  Crique Sarco  </option>
+	<option data-belong="Toledo" data-ref="">   Dolores </option>
+	<option data-belong="Toledo" data-ref=""> Eldridgeville   </option>
+	<option data-belong="Toledo" data-ref="">   Forest Home </option>
+	<option data-belong="Toledo" data-ref="">   Golden Stream </option>
+	<option data-belong="Toledo" data-ref="">  Indian Creek  </option>
+	<option data-belong="Toledo" data-ref=""> Jacintoville   </option>
+	<option data-belong="Toledo" data-ref="">  Jalacte  </option>
+	<option data-belong="Toledo" data-ref="">  Jordan  </option>
+	<option data-belong="Toledo" data-ref=""> Laguna   </option>
+	<option data-belong="Toledo" data-ref=""> Mabil Ha   </option>
+	<option data-belong="Toledo" data-ref="">  Mafredi  </option>
+	<option data-belong="Toledo" data-ref=""> Midway   </option>
+	<option data-belong="Toledo" data-ref="">  Monkey River  </option>
+	<option data-belong="Toledo" data-ref=""> Na Luum Ca   </option>
+	<option data-belong="Toledo" data-ref="">  Otoxha  </option>
+	<option data-belong="Toledo" data-ref=""> Pueblo Viejo   </option>
+	<option data-belong="Toledo" data-ref="">   Punta Negra </option>
+	<option data-belong="Toledo" data-ref="">  San Antonio  </option>
+	<option data-belong="Toledo" data-ref="">  San Benito Poite  </option>
+	<option data-belong="Toledo" data-ref="">  San Felipe  </option>
+	<option data-belong="Toledo" data-ref="">   San Jose </option>
+	<option data-belong="Toledo" data-ref="">   San Lucas </option>	
+	<option data-belong="Toledo" data-ref="">   San Marcos </option>
+	<option data-belong="Toledo" data-ref="">  San Miguel  </option>
+	<option data-belong="Toledo" data-ref=""> San Pablo   </option>
+	<option data-belong="Toledo" data-ref="">   San Pedro Columbia </option>
+	<option data-belong="Toledo" data-ref="">  San Vicente  </option>
+	<option data-belong="Toledo" data-ref="">  Santa Ana  </option>
+	<option data-belong="Toledo" data-ref="">  Santa Cruz  </option>
+	<option data-belong="Toledo" data-ref="">  Santa Elena  </option>
+	<option data-belong="Toledo" data-ref="">  Santa Teresa  </option>
+	<option data-belong="Toledo" data-ref=""> Silver Creek   </option>
+	<option data-belong="Toledo" data-ref="">  Sunday Wood  </option>
+	<option data-belong="Toledo" data-ref="">   Trio </option>
+	<option data-belong="Toledo" data-ref="">  Yemeri Grove  </option>
+
+	
+
+</select>
+<br />
+<br />
+
+
+	<!-- Twon of neighborhood -->
+
+<label>neighborhood :</label>
+
+<select data-target="SeventhList" class="SixthList selectFilter">
+
+	<option value="-1" data-ref="">Select</option>
+		<!-- Twon of Placencia -->
+	<option data-belong="Placencia" > Placencia Village   </option>
+	<option data-belong="Placencia" >  Maya Beach  </option>
+	<option data-belong="Placencia" >  Surfside  </option>
+	<option data-belong="Placencia" >  Plantation  </option>
+	<option data-belong="Placencia" >  CocoPlum  </option>
+	<option data-belong="Placencia" >  Caribbean Way  </option>
+	<option data-belong="Placencia" > Riversdale   </option>
+	<option data-belong="Placencia" >  Seine Bight  </option>
+
+		<!-- Twon of Copper-Bank -->
+	<option data-belong="Copper-Bank" >  Lowry's Bight  </option>
+	<option data-belong="Copper-Bank" >  Cerros Sands  </option>
+	<option data-belong="Copper-Bank" >   Cerros Peninsula </option>
+
 
 
 </select>
+
 
 
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="selectFilter.min.js"></script>
 </body>
 </html>
+
