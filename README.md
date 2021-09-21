@@ -1,4 +1,5 @@
-SelectFilter is a jQuery plugin for creating dependent select boxes where options are derived based on the value selected from other select element(s).
+## View the website at
+# https://arinol.github.io/cascading_dropdown_infinite_levels/
 
 # How to use it:
 
